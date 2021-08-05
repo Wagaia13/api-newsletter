@@ -1,6 +1,6 @@
 {
-    "name": "acelle/sdk-php",
-    "description": "PHP API SDK Client for Acelle Mail",
+    "name": "wagaia/api-newsletter",
+    "description": "PHP API SDK Client",
     "require": {
         "monolog/monolog": "2.3.*",
         "guzzlehttp/guzzle": "^7.2"
