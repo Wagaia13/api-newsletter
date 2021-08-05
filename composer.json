@@ -2,7 +2,7 @@
     "name": "wagaia/api-newsletter",
     "description": "PHP API Client",
     "require": {
-        "guzzlehttp/guzzle": "~7"
+        "guzzlehttp/guzzle": "6.5.5"
     },
     "autoload": {
         "psr-4": {"Acelle\\": "src/"}
