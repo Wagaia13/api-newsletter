@@ -23,7 +23,7 @@ class Subscriber extends Base {
 
     public function subscribeAll()
     {
-        return $this->makeRequest('/subscribe-all', 'POST');
+        return $this->makeRequest('subscribe-all', 'POST');
     }
 
     public function unsubscribe($uid)
