@@ -21,9 +21,9 @@ class Subscriber extends Base {
         return $this->makeRequest($uid.'/subscribe', 'PATCH');
     }
 
-    public function subscribeAll($uid)
+    public function subscribeAll()
     {
-        return $this->makeRequest($uid.'/subscribe-all', 'POST');
+        return $this->makeRequest('/subscribe-all', 'POST');
     }
 
     public function unsubscribe($uid)
