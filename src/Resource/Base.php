@@ -35,6 +35,7 @@ class Base {
 	}
 
 	public function makeRequest($action = '', $method = 'POST', $params = [], $headers = []) {
+
         $uri = $this->client->getUri();
         
         if ($this->getSubject()) {
