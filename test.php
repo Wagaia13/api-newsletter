@@ -1,11 +1,30 @@
 <?php
 
-    require __DIR__ . '/vendor/autoload.php';
+    use Wagaia\Filigrane\Helper;
+
+    require_once(__DIR__.'/vendor/autoload.php');
+
+    /*$api = new Acelle\Client(
+        NEWSLETTER_API_ENDPOINT,
+        NEWSLETTER_API_TOKEN
+    );*/
+
+    echo $file = ABSPATH.'api/test.txt';
+
+    $array = explode("|", file_get_contents($file));
+    dump($array);
 
 
-    $client = new Acelle\Client(
-            'http://acelle.local/api/v1',
-            'aIpfXqiFMnsvO0e9nlpACZ4x0euvngGTKADSnjKy1760uY5vZ9strUX0f9RW'
-        );
+    /*$subscribers = $db->select("SELECT * FROM wagaia_candidate c RIGHT JOIN wagaia_candidate_email ce ON ce.candidate_id = c.id");
+    echo 'Nb: '.count($subscribers).'<br />';
 
-    var_dump($client->subscriber()->update('5fa8a9429f72d', ['ddd' => 'fff']));
+    $filename = 'test.txt';
+    Helper::createFile($subscribers, $filename);
+
+    $response = $api->subscriber()->subscribeAll([
+        'list_uid' => '6110e6cca2af2',
+        'url' => HTTP.'api/'.$filename,
+        'filename' => $filename
+    ]);
+
+    dump($response);*/
