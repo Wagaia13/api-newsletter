@@ -49,16 +49,20 @@ class Base {
         $headers = array_merge([
             'Content-Type' => 'application/json',
         ], $headers);
+
         try {
+
             $response = $client->request($method, $uri, [
                 'headers' => $headers,
                 'body' => json_encode(array_merge(['api_token' => $this->client->getToken()], $params)),
             ]);
-        } catch (\Exception $e) {
+
+            return json_decode($response->getBody(), true);
+
+        } catch (\GuzzleHttp\Exception\RequestException $e) {
             echo 'Uh oh! ' . $e->getMessage();
             return;
         }
-        
-        return json_decode($response->getBody(), true);
+
 	}
 }
