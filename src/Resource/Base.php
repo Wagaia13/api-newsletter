@@ -3,6 +3,7 @@
 namespace Acelle\Resource;
 
 class Base {
+
     private $client;
     
     public function getSubject() {
