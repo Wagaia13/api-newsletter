@@ -48,7 +48,7 @@ class Base {
         
         $client = new \GuzzleHttp\Client(['http_errors' => true]);
         $headers = array_merge([
-            'Content-Type' => 'application/json',
+            'Content-Type' => 'application/json',  'Accept' => '*/*'
         ], $headers);
 
         try {
